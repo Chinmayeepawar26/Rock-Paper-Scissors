@@ -25,13 +25,14 @@ body{
 img{
     width:100%;
     height:100%;
-    /* border-radius: 50%; */
+     border-radius: 20rem;
     object-fit: cover;
 }
 .choice{
     height:30vmin;
     width:30vmin;
     margin:0.7rem;
+    
 }
 .choice:hover{
     opacity:0.5;
