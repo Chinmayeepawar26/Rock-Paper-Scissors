@@ -14,33 +14,33 @@ const genCompChoice=()=>{
    
 }
 const drawGame=()=>{
-    msg.innerText="Game was draw,Play again";
+    msg.innerText="Game was a draw, Play again!";
     msg.style.backgroundColor="#1e3888";
     
 }
-const Winner=(userWin,userChoice,compChoice)=>{
+const showWinner=(userWin,userChoice,compChoice)=>{
     if(userWin===true){
         userScore++;
         userScorePara.innerText=userScore;
-        console.log("You win");
+        // console.log("You win");
         msg.innerText=`You win! Your ${userChoice} beats ${compChoice}`;
          msg.style.backgroundColor="green";
     }
     else{
         compScore++;
         compScorePara.innerText=compScore;
-        console.log("Computer win");
-        msg.innerText=`You Lost ${compChoice} beats your ${userChoice}`;
+        // console.log("Computer win");
+        msg.innerText=`You lost! ${compChoice} beats your ${userChoice}`;
          msg.style.backgroundColor="#9C3848";
     }
 }
 const playGame=(userChoice)=>{
-    console.log("User choice=",userChoice)
+    // console.log("User choice=",userChoice)
    const compChoice=genCompChoice();
-    console.log("Computer choice=",compChoice);
+    // console.log("Computer choice=",compChoice);
     if(userChoice===compChoice)
     {
-        console.log("draw");
+        // console.log("draw");
         drawGame();
     }
     else {
@@ -55,7 +55,7 @@ const playGame=(userChoice)=>{
         userWin=compChoice==="rock"?false:true;
        }
     
-   Winner(userWin,userChoice,compChoice);
+   showWinner(userWin,userChoice,compChoice);
     }
 }
 choices.forEach((choice) => {
